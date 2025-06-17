@@ -2,4 +2,17 @@
 $theme-colors: (
   "primary":#2563EB
 );
+
+@font-face {
+  font-family: 'inter';
+  src: url('../../build/assets/fonts/Inter/static/Inter_18pt-Bold.ttf');
+}
+$font-family-base: 'Inter', sans-serif;
+.header{
+  background-image: url('../../build/img/imagen_header.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: 'inter' !important;
+}
 @import "../../node_modules/bootstrap/scss/bootstrap";

@@ -3,16 +3,80 @@ $theme-colors: (
   "primary":#2563EB
 );
 
+
+
 @font-face {
   font-family: 'inter';
-  src: url('../../build/assets/fonts/Inter/static/Inter_18pt-Bold.ttf');
+  src: url('../../build/assets/fonts/Inter/static/Inter_18pt-BlackItalic.ttf');
 }
-$font-family-base: 'Inter', sans-serif;
 .header{
   background-image: url('../../build/img/imagen_header.webp');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: 'inter' !important;
+  font-family: 'inter', sans-serif;
 }
+footer{
+    background-color: #3B82F6;
+}
+.descripcion__card {
+    flex: 1;
+    min-width: 280px; /* para móviles */
+}
+
+/* Animación de entrada para secciones y cards */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Delays para efectos escalonados */
+.fade-delay-1 { animation-delay: 0.2s; }
+.fade-delay-2 { animation-delay: 0.4s; }
+.fade-delay-3 { animation-delay: 0.6s; }
+.fade-delay-4 { animation-delay: 0.8s; }
+.fade-delay-5 { animation-delay: 1s; }
+
+/* Transición al pasar por encima */
+.descripcion__card .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.descripcion__card .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Transición en enlaces del navbar */
+.nav a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav a:hover {
+    color: #ffc107; /* Amarillo Bootstrap */
+    transform: scale(1.05);
+}
+
+.card,
+.card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.gestion{
+    height: 200px;
+    width: 50%;
+}
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
